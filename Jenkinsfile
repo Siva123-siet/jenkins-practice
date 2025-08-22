@@ -8,7 +8,7 @@ pipeline {
     }
     options {
         timeout(time: 30, unit: 'MINUTES') 
-        disableConcurrentBuilds()
+        disableConcurrentBuilds() 
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
@@ -17,7 +17,7 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-    // Build
+    // Build 
     stages {
         stage('Build') {
             steps {
